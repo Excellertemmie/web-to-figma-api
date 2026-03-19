@@ -26,11 +26,20 @@ export default async function handler(req) {
   const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i);
 
   return new Response(JSON.stringify({
-    html, url,
+    html,
+    url,
     title: titleMatch ? titleMatch[1].trim() : '',
     size: html.length,
   }), {
     status: 200,
-    headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*'
+    }
   });
 }
+```
+
+Click **Commit changes** → wait 30 seconds for Vercel to redeploy → test again:
+```
+https://web-to-figma-api.vercel.app/api/fetch?url=https://example.com
