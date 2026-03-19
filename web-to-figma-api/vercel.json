@@ -1,6 +1,7 @@
 {
   "functions": {
     "api/fetch.js": {
+      "runtime": "node@20",
       "maxDuration": 30
     }
   }
