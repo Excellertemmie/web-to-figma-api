@@ -1,0 +1,6 @@
+{
+  "name": "web-to-figma-api",
+  "version": "1.0.0",
+  "description": "Backend for Web to Figma Figma plugin",
+  "private": true
+}
